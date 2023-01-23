@@ -8,3 +8,9 @@ var water = {
    muddyWater: 0
 };
   
+var population {
+   people: 5
+   workforce: 5
+   sick: 0
+   wounded: 0
+}
