@@ -9,8 +9,8 @@ var water = {
 };
   
 var population = {
-   people: 5
-   workforce: 5
-   sick: 0
+   people: 5,
+   workforce: 5,
+   sick: 0,
    wounded: 0
 }
