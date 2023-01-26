@@ -17,5 +17,5 @@ var game = {
 
 setInterval (function() {
    game.population = game.babies + game.children + game.adults + game.elders;
-   document.getElementById("population").innerText = game.population
+   document.getElementById("population").innerText = game.population;
 }, 10);
