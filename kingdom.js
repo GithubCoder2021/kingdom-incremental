@@ -14,3 +14,8 @@ var game = {
    elders: 0,
    year: 0
 }
+
+setInterval (function() {
+   game.population = game.babies + game.children + game.adults + game.elders;
+   document.getElementById("population").innerText = game.population
+}, 10);
