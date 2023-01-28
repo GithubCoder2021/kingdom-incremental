@@ -34,10 +34,10 @@ setInterval (function() {
    if (game.happiness <= 0) {
       game.happiness = 0;
    }
-   game.birthRate = 150/ game.happyMult ;
+   game.birthRate = (150/ game.happyMult) * 1000;
 }, 10);
 
 setInterval (function() {
    game.babies += 1;
-}, game.birthRate * 1000);
+}, game.birthRate);
 
