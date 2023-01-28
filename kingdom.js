@@ -16,9 +16,9 @@ var game = {
    elders: 0,
    year: 0,
    happiness: 50,
-   happyMult: 1,
-   birthRate: 1
+   happyMult: 1
 }
+birthRate = 1;
 
 setInterval (function() {
    game.population = game.babies + game.children + game.adults + game.elders;
@@ -34,10 +34,10 @@ setInterval (function() {
    if (game.happiness <= 0) {
       game.happiness = 0;
    }
-   game.birthRate = (150/ game.happyMult) * 1000;
+   birthRate = (150/game.happyMult) * 1000;
 }, 10);
 
 setInterval (function() {
    game.babies += 1;
-}, game.birthRate);
+}, birthRate);
 
