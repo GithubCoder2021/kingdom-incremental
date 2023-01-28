@@ -25,8 +25,19 @@ setInterval (function() {
    document.getElementById("population").innerText = game.population;
    game.happyMult = game.happiness/50;
    document.getElementById("happiness").innerText = game.happiness;
-   if (game.happiness <= 10) {
-      game.happyMult = 0.1;
+   if (game.happiness <= 12) {
+      game.happyMult = 0.25;
    }
+   if (game.happiness >= 100) {
+      game.happiness = 100;
+   }
+   if (game.happiness <= 0) {
+      game.happiness = 0;
+   }
+   game.birthRate = 150/ game.happyMult ;
 }, 10);
+
+setInterval (function() {
+   game.babies += 1;
+}, game.birthRate * 1000);
 
