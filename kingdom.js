@@ -16,7 +16,9 @@ var game = {
    elders: 0,
    year: 0,
    happiness: 50,
-   happyMult: 1
+   happyMult: 1,
+   farmers: 0,
+   dreamers: 0
 }
 
 
@@ -34,9 +36,20 @@ setInterval (function() {
    if (game.happiness <= 0) {
       game.happiness = 0;
    }
+   
 }, 10);
 
 setInterval (function() {
    game.babies += 1;
 }, 120000);
 
+function giveJob(job) {
+   if (game.workforce >= game.maxWorkforce){
+      if (job == 'farmers') {
+         game.farmers++;
+      } else {
+         game.dreamers++;
+      }
+      game.workforce++;
+   }
+}
