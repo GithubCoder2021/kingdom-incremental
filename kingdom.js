@@ -28,8 +28,10 @@ setInterval (function() {
 }, 10);
 
 setInterval (function() {
-   game.babies += 1;
-}, 120000);
+   if (game.adults >= 2){
+     game.babies += 1;
+   }
+}, 60000);
 
 function giveJob(job) {
    if (game.workforce >= game.maxWorkforce){
